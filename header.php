@@ -30,7 +30,9 @@
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbar-primary">
             <div class="container">
                 <!-- <img class="navbar-brand" src="<?php echo get_bloginfo('template_directory'); ?>/content/images/logos/Godfroy_Financial_Logo_Resize.png" alt="logo"> -->
-                <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="navbar-brand"><img alt="Godfroy Financial Group" src="<?php echo get_bloginfo('template_directory'); ?>/content/images/logos/Godfroy_Financial_Logo_Resize.png"></a>
+                <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="navbar-brand">
+                    <img alt="Godfroy Financial Group" src="<?php echo get_bloginfo('template_directory'); ?>/content/images/logos/Godfroy_Financial_Logo_Resize.png">
+                </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav-body" aria-controls="header-nav-body"
                     aria-expanded="false" aria-label="Toggle navigation">

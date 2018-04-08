@@ -9,7 +9,7 @@ body {
 .navbar-primary {
   min-height: 75px;
   z-index: 9999; }
-  .navbar-primary .container .navbar-brand {
+  .navbar-primary .container .navbar-brand img {
     max-height: 65px;
     max-width: 200px;
     margin-top: 2.5px; }

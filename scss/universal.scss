@@ -17,9 +17,11 @@ body {
   
   .container {
     .navbar-brand {
-      max-height: $navbarPrimaryMinHeight - 10px;
-      max-width: 200px;
-      margin-top: 2.5px;
+      img {
+        max-height: $navbarPrimaryMinHeight - 10px;
+        max-width: 200px;
+        margin-top: 2.5px;
+      }
     }
     #header-nav-body {
       margin-top: 20px;
