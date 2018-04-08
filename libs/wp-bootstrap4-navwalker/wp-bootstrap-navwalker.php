@@ -246,7 +246,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 
       $item_output = $args->before;
       $item_output .= '<a class="' . implode( ' ', $item_classes ) . '" ' . $attributes . '>';
-      $item_output .= $args->link_before . $title . $args->link_after;
+      $item_output .= $args->link_before . "Depth:$depth - " . $title . $args->link_after;
       $item_output .= '</a>';
       $item_output .= $args->after;
 
@@ -264,9 +264,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
        * @param int      $depth       Depth of menu item. Used for padding.
        * @param stdClass $args        An object of wp_nav_menu() arguments.
        */
-      if ($depth < 2) {
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-      }
     }
 
     /**
