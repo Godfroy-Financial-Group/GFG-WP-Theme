@@ -64,7 +64,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
       }
 
       $this->dropdown = true;
-      $output         .= $n . str_repeat( $t, $depth ) . '<ul class="dropdown-menu" role="menu">' . $n;
+      $output         .= $n . str_repeat( $t, $depth ) . '<div class="dropdown-menu" role="menu">' . $n;
     }
 
     /**
@@ -88,7 +88,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
       }
 
       $this->dropdown = false;
-      $output         .= $n . str_repeat( $t, $depth ) . '</ul>' . $n;
+      $output         .= $n . str_repeat( $t, $depth ) . '</div>' . $n;
     }
 
     /**
