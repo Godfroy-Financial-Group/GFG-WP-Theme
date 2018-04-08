@@ -66,7 +66,7 @@
                     <?php
                         wp_nav_menu( array(
                             'theme_location'  => 'footer-menu',
-                            'depth'           => 2,
+                            'depth'           => 0,
                             'container'       => '',
                             'container_class' => '',
                             'menu_class'      => 'navbar-nav mr-auto',
@@ -74,20 +74,6 @@
                             'walker'          => new WP_Bootstrap_Navwalker()
                         ) );
                     ?>
-                    <!-- <ul class="navbar-nav mr-auto">
-                        <li>
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#">Terms &amp; Conditions</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#">Privacy Policy</a>
-                        </li>
-                    </ul> -->
                 </div>
             </div>
         </nav>
