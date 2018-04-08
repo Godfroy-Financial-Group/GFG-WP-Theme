@@ -42,7 +42,7 @@
                     'depth'           => 0,
                     'container'       => 'div',
                     'container_class' => 'collapse navbar-collapse',
-                    'menu_class'      => 'nav navbar-nav mr-auto',
+                    'menu_class'      => 'navbar-nav mr-auto',
                     'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
                     'walker'          => new WP_Bootstrap_Navwalker()
                 ) );
