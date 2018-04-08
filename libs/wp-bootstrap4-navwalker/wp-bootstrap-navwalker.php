@@ -245,9 +245,11 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
       }
 
       $item_output = $args->before;
-      //$item_output .= '<a class="' . implode( ' ', $item_classes ) . '" ' . $attributes . '>';
-      //$item_output .= $args->link_before . $title . $args->link_after;
-      //$item_output .= '</a>';
+      if ($depth < 3) {
+        $item_output .= '<a class="' . implode( ' ', $item_classes ) . '" ' . $attributes . '>';
+        $item_output .= $args->link_before . $title . $args->link_after;
+        $item_output .= '</a>';
+      }
       $item_output .= $args->after;
 
       /**
