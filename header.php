@@ -40,7 +40,7 @@
                     <?php
                         wp_nav_menu( array(
                             'theme_location'  => 'header-menu',
-                            'depth'           => 0,
+                            'depth'           => 4,
                             'container'       => '',
                             'container_class' => '',
                             'menu_class'      => 'navbar-nav mr-auto',
