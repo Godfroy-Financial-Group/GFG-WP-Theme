@@ -165,7 +165,7 @@
                 <a class="navbar-brand" href="#">&copy; 2017 Godfroy Financial Group</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-nav-body" aria-controls="footer-nav-body"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    aria-haspopup="true" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="footer-nav-body">
