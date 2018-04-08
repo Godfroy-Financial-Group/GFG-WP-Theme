@@ -36,19 +36,20 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="header-nav-body">
-                    <?php
-                        wp_nav_menu( array(
-                            'theme_location'  => 'header-menu',
-                            'depth'           => 4,
-                            'container'       => '',
-                            'container_class' => '',
-                            'menu_class'      => 'navbar-nav mr-auto',
-                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker'          => new WP_Bootstrap_Navwalker()
-                        ) );
-                    ?>
 
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location'    => 'header-menu',
+                            'depth'             => 2,
+                            'container'         => 'div',
+                            'container_class'   => 'collapse navbar-collapse',
+                            'container_id'      => 'bs-example-navbar-collapse-1',
+                            'menu_class'        => 'nav navbar-nav',
+                            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'            => new WP_Bootstrap_Navwalker()
+                        ) );
+                        ?>
+                <!-- <div class="collapse navbar-collapse" id="header-nav-body"> -->
                     <!-- <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home</a>
@@ -85,7 +86,7 @@
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
                     </ul> -->
-                </div>
+                <!-- </div> -->
             </div>
         </nav>
     </header>
