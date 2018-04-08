@@ -47,7 +47,7 @@
                     'walker'          => new WP_Bootstrap_Navwalker()
                 ) );
                 ?>
-                
+ 
                 <!-- <div class="collapse navbar-collapse" id="header-nav-body">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
