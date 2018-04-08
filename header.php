@@ -39,7 +39,7 @@
                 <?php
                 wp_nav_menu( array(
                     'theme_location'    => 'header-menu',
-                    'depth'             => 0,
+                    'depth'             => 5,
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'header-nav-body',
