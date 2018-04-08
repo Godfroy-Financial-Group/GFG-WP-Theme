@@ -1,0 +1,157 @@
+/* Header, Body and Footer Layout */
+
+$navbarPrimaryMinHeight: 75px;
+$footerMinHeight: 60px;
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: $footerMinHeight + 40px;
+}
+
+.navbar-primary {
+  min-height: $navbarPrimaryMinHeight;
+  .container {
+    .navbar-header {
+      .navbar-left {
+        img {
+          max-height: $navbarPrimaryMinHeight - 10px;
+          max-width: 200px;
+          margin-top: 2.5px;
+        }
+      }
+    }
+    #header-nav-body {
+      margin-top: 20px;
+    }
+  }
+}
+
+.main-container {
+  margin-top: $navbarPrimaryMinHeight;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: $footerMinHeight;
+  background-color: #222;
+  .navbar {
+    margin-bottom: 0;
+    border: 0;
+  }
+}
+
+
+/* Multi Level Dropdown Menus */
+
+@media (min-width: 767px) {
+  .navbar-nav .dropdown-menu .caret {
+    transform: rotate(-90deg);
+  }
+}
+
+
+/* Carousel Styles */
+
+
+/* https://bootsnipp.com/snippets/featured/responsive-quote-carousel */
+
+
+/* Carousel */
+
+#testimonial-carousel {
+  padding: 0 10px 30px 10px;
+  margin-top: 30px;
+  /* Control buttons  */
+  .carousel-control {
+    background: none;
+    color: #222;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+  }
+  /* Previous button  */
+  .carousel-control.left {
+    left: -12px;
+  }
+  /* Next button  */
+  .carousel-control.right {
+    right: -12px !important;
+  }
+  /* Changes the position of the indicators */
+  .carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-right: -19px;
+    /* Changes the color of the indicators */
+    li {
+      background: #c0c0c0;
+    }
+    .active {
+      background: #333333;
+    }
+  }
+  img {
+    width: 250px;
+    height: 100px
+  }
+}
+
+
+/* End carousel */
+
+.item blockquote {
+  border-left: none;
+  margin: 0;
+  img {
+    margin-bottom: 10px;
+  }
+  p:before {
+    content: '"'; // content: "\f10d";
+    font-size: 3.0rem; // font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+    margin-top: -10px;
+  }
+}
+
+
+/**
+  MEDIA QUERIES
+*/
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+  #testimonial-carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+  }
+}
+
+
+/* Small devices (tablets, up to 768px) */
+
+@media (max-width: 768px) {
+  /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+  #testimonial-carousel .carousel-indicators {
+    bottom: -20px !important;
+    li {
+      display: inline-block;
+      margin: 0px 5px;
+      width: 15px;
+      height: 15px;
+    }
+    li.active {
+      margin: 0px 5px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

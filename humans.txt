@@ -1,0 +1,14 @@
+/* TEAM */                  
+Developer: Andrew Godfroy
+Site: killerrin.com
+Twitter: @killerrin
+Email: andrew.godfroy [at] killerrin.com
+Location: Windsor, Ontario Canada.
+
+/* THANKS */
+                            
+/* SITE */
+Last update: 2017/05/24 
+Standards: HTML5, CSS3
+Components: Bootstrap 4.0, jQuery 3.2.1
+Software: Visual Studio Code, Notepad++, FileZilla, Photoshop
