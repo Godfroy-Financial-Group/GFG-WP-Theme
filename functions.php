@@ -23,11 +23,11 @@ function custom_theme_settings_page() { ?>
 
 // Twitter
 function setting_twitter() { ?>
-<input type="text" name="twitter" id="twitter" value="<?php echo get_option('twitter'); ?>" />
+<input type="text" name="twitter" id="twitter" value="<?php echo get_option('twitter'); ?>" size="50" />
 <?php }
 // Facebook
 function setting_facebook() { ?>
-<input type="text" name="facebook" id="facebook" value="<?php echo get_option('facebook'); ?>" />
+<input type="text" name="facebook" id="facebook" value="<?php echo get_option('facebook'); ?>" size="50" />
 <?php }
 
 function custom_theme_settings_page_setup() {
