@@ -84,4 +84,3 @@
     <h1><a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
     <p><?php echo get_bloginfo( 'description' ); ?></p>
 </div>
-<?php wp_list_pages();?>
