@@ -37,7 +37,19 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="header-nav-body">
-                    <ul class="navbar-nav mr-auto">
+                    <?php
+                        wp_nav_menu( array(
+                            'theme_location'  => 'header-menu',
+                            'depth'           => 0,
+                            'container'       => '',
+                            'container_class' => '',
+                            'menu_class'      => 'navbar-nav mr-auto',
+                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'          => new WP_Bootstrap_Navwalker()
+                        ) );
+                    ?>
+
+                    <!-- <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home</a>
                         </li>
@@ -72,7 +84,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </div>
         </nav>

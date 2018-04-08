@@ -5,7 +5,7 @@ require_once get_template_directory() . '/libs/wp-bootstrap4-navwalker/wp-bootst
 function register_my_menus() {
     register_nav_menus(
       array(
-        'header-menu' => __( 'Header Menu' ),
+        'header-menu' => __( 'Main Menu' ),
         'footer-menu' => __( 'Footer Menu' )
       )
     );
