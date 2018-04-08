@@ -63,17 +63,20 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="footer-nav-body">
-                    <?php
-                        wp_nav_menu( array(
-                            'theme_location'  => 'footer-menu',
-                            'depth'           => 2,
-                            'container'       => 'div',
-                            'container_class' => 'collapse navbar-collapse',
-                            'menu_class'      => 'nav navbar-nav ml-auto',
-                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker'          => new WP_Bootstrap_Navwalker()
-                        ) );
-                    ?>
+                    <ul class="navbar-nav mr-auto">
+                        <li>
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
