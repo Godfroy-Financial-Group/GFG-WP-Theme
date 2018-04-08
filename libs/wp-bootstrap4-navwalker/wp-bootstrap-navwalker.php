@@ -42,6 +42,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
      * @var type    bool
      */
     private $dropdown = false;
+    private $dropdownDepth = 0;
 
     /**
      * Starts the list before the elements are added.
@@ -62,9 +63,16 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
         $t = "\t";
         $n = "\n";
       }
-
+      
+      if ($this->dropdownDepth < 1) { 
+        $output         .= $n . str_repeat( $t, $depth ) . '<div class="dropdown-menu" role="menu">' . $n;
+      }
+      else {
+        $output         .= $n . str_repeat( $t, $depth ) . '<ul class="dropdown-menu" role="menu">' . $n;
+      }
+      
       $this->dropdown = true;
-      $output         .= $n . str_repeat( $t, $depth ) . '<div class="dropdown-menu" role="menu">' . $n;
+      $this->dropdownDepth++;
     }
 
     /**
@@ -87,8 +95,15 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
         $n = "\n";
       }
 
+      if ($this->dropdownDepth < 1) { 
+        $output         .= $n . str_repeat( $t, $depth ) . '</div>' . $n;
+      }
+      else {
+        $output         .= $n . str_repeat( $t, $depth ) . '</ul>' . $n;
+      }
+      
       $this->dropdown = false;
-      $output         .= $n . str_repeat( $t, $depth ) . '</div>' . $n;
+      $this->dropdownDepth--;      
     }
 
     /**
