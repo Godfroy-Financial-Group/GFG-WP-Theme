@@ -120,7 +120,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
      * @param int      $id     Current item ID.
      */
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-      if ($depth > 1) { return; }
+      // if ($depth > 1) { return; }
 
       if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
         $t = '';
@@ -145,7 +145,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
       $classes[] = 'nav-item';
 
       if ( $args->walker->has_children ) {
-        // $classes[] = 'dropdown';
+        $classes[] = 'dropdown';
       }
 
       if ( 0 < $depth ) {
@@ -297,7 +297,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
     public function end_el( &$output, $item, $depth = 0, $args = array() ) {
-      if ($depth > 1) { return; }
+      // if ($depth > 1) { return; }
       
       if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
         $t = '';
