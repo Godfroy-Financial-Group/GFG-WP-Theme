@@ -245,7 +245,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
       }
 
       $item_output = $args->before;
-      $item_output .= '<li><a class="' . implode( ' ', $item_classes ) . '" ' . $attributes . '>';
+      $item_output .= '<a class="' . implode( ' ', $item_classes ) . '" ' . $attributes . '>';
       $item_output .= $args->link_before . $title . $args->link_after;
       $item_output .= '</a>';
       $item_output .= $args->after;
@@ -288,7 +288,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
         $n = "\n";
       }
 
-      $output .= $this->dropdown ? '</li>' : str_repeat( $t, $depth ) . '</li>' . $n;
+      $output .= $this->dropdown ? '' : str_repeat( $t, $depth ) . '</li>' . $n;
     }
 
     /**
