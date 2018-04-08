@@ -71,9 +71,6 @@
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#">Review</a>
-                        </li>
-                        <li>
                             <a class="nav-link" href="#">Terms &amp; Conditions</a>
                         </li>
                         <li>
