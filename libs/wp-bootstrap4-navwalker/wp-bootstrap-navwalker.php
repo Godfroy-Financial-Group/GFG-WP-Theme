@@ -130,7 +130,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
       $classes[] = 'nav-item';
 
       if ( $args->walker->has_children ) {
-        $classes[] = 'dropdown';
+        // $classes[] = 'dropdown';
       }
 
       if ( 0 < $depth ) {
