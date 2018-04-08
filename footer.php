@@ -67,8 +67,8 @@
                         wp_nav_menu( array(
                             'theme_location'  => 'footer-menu',
                             'depth'           => 2,
-                            'container'       => 'div',
-                            'container_class' => 'collapse navbar-collapse',
+                            'container'       => '',
+                            'container_class' => '',
                             'menu_class'      => 'navbar-nav mr-auto',
                             'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
                             'walker'          => new WP_Bootstrap_Navwalker()
