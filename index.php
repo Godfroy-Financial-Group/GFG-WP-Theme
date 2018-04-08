@@ -11,6 +11,8 @@
     <!-- Import our Libs -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <link href="libs/bootstrap-4-multi-dropdown-navbar/css/bootstrap-4-navbar.css" rel="stylesheet">
+
     <!-- And now our site stylesheets -->
     <link rel="stylesheet" href="css/universal.css">
     <link rel="stylesheet" href="css/home.css">
@@ -39,11 +41,36 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_ProductsAndServices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Products & Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_ProductsAndServices">
+                                <li><a class="dropdown-item" href="#">Insurance</a></li>
+                                <li><a class="dropdown-item" href="#">Taxes</a></li>
+                                <li><a class="dropdown-item dropdown-toggle" href="#">Investments</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Client Login</a></li>
+                                </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_Education" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Education
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_Education">
+                            </ul>
+                        </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Our 2 Cents</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
+                            <a class="nav-link" href="#">Newsletter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -85,29 +112,31 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                    <blockquote>
+                        <blockquote>
                             <div class="row">
                                 <div class="col-12">
                                     <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                                        velit!</p>
+                                        velit!
+                                    </p>
                                     <small>Someone famous</small>
                                 </div>
                             </div>
                         </blockquote>
                     </div>
                     <div class="carousel-item">
-                    <blockquote>
+                        <blockquote>
                             <div class="row">
                                 <div class="col-12">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor.
-                                        Mauris.</p>
+                                        Mauris.
+                                    </p>
                                     <small>Someone famous</small>
                                 </div>
                             </div>
                         </blockquote>
                     </div>
                     <div class="carousel-item">
-                    <blockquote>
+                        <blockquote>
                             <div class="row">
                                 <div class="col-12">
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit,
@@ -168,6 +197,7 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="libs/bootstrap-4-multi-dropdown-navbar/js/bootstrap-4-navbar.js"></script>
     <!-- And now our Site Scripts -->
 
     <?php wp_footer(); ?>
