@@ -13,7 +13,7 @@ body {
 
 .navbar-primary {
   min-height: $navbarPrimaryMinHeight;
-  z-index: 9999;
+  // z-index: 9999;
   
   .container {
     .navbar-brand {
@@ -32,7 +32,7 @@ body {
 }
 
 .footer {
-  z-index: 9999;
+  // z-index: 9999;
   position: absolute;
   bottom: 0;
   width: 100%;
