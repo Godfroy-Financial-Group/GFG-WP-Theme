@@ -29,7 +29,6 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbar-primary">
             <div class="container">
-                <!-- <img class="navbar-brand" src="<?php echo get_bloginfo('template_directory'); ?>/content/images/logos/Godfroy_Financial_Logo_Resize.png" alt="logo"> -->
                 <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="navbar-brand">
                     <img class="navbar-logo" alt="Godfroy Financial Group" src="<?php echo get_bloginfo('template_directory'); ?>/content/images/logos/Godfroy_Financial_Logo_Resize.png">
                 </a>
@@ -38,20 +37,18 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <?php
-                wp_nav_menu( array(
-                    'theme_location'  => 'header-menu',
-                    'depth'           => 0,
-                    'container'       => 'div',
-                    'container_class' => 'collapse navbar-collapse',
-                    'menu_class'      => 'navbar-nav mr-auto',
-                    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker'          => new WP_Bootstrap_Navwalker()
-                ) );
-                ?>
- 
-                <!-- <div class="collapse navbar-collapse" id="header-nav-body">
-                    <ul class="navbar-nav mr-auto">
+                
+                <div class="collapse navbar-collapse" id="header-nav-body">
+                    <?php wp_nav_menu( array(
+                        'theme_location'  => 'header-menu',
+                        'depth'           => 0,
+                        'container'       => '',
+                        'container_class' => '',
+                        'menu_class'      => '',
+                        'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker'          => new WP_Bootstrap_Navwalker()
+                    ) ); ?>
+                    <!--<ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home</a>
                         </li>
@@ -86,8 +83,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
-                    </ul>
-                </div> -->
+                    </ul>-->
+                </div> 
             </div>
         </nav>
     </header>
