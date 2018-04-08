@@ -35,7 +35,7 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
    * @author         Javier Prieto
    */
   class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
-    public const BS_MAX_DEPTH = 1;
+    public const BS_MAX_DEPTH = 2;
     public const BS_DROPDOWN_MANUAL_DEPTH = 1;
 
     /**
@@ -57,15 +57,18 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
-      if ($depth < WP_Bootstrap_Navwalker::BS_MAX_DEPTH) {
-        if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-          $t = '';
-          $n = '';
-        } else {
-          $t = "\t";
-          $n = "\n";
-        }
-        
+      if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+        $t = '';
+        $n = '';
+      } else {
+        $t = "\t";
+        $n = "\n";
+      }
+
+      if ($depth >= WP_Bootstrap_Navwalker::BS_DROPDOWN_MANUAL_DEPTH) {
+        $output         .= $n . str_repeat( $t, $depth ) . '<ul class="dropdown-menu" role="menu">' . $n;
+      }
+      else {
         $this->dropdown = true;
         $output         .= $n . str_repeat( $t, $depth ) . '<div class="dropdown-menu" role="menu">' . $n;
       }
@@ -83,15 +86,19 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
     public function end_lvl( &$output, $depth = 0, $args = array() ) {
-      if ($depth < WP_Bootstrap_Navwalker::BS_MAX_DEPTH) {
-        if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-          $t = '';
-          $n = '';
-        } else {
-          $t = "\t";
-          $n = "\n";
-        }
+      if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+        $t = '';
+        $n = '';
+      } else {
+        $t = "\t";
+        $n = "\n";
+      }
 
+
+      if ($depth >= WP_Bootstrap_Navwalker::BS_DROPDOWN_MANUAL_DEPTH) {
+        $output         .= $n . str_repeat( $t, $depth ) . '</ul>' . $n;
+      }
+      else {
         $this->dropdown = false;
         $output         .= $n . str_repeat( $t, $depth ) . '</div>' . $n;
       }
@@ -111,17 +118,16 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
      * @param int      $id     Current item ID.
      */
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+      if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+        $t = '';
+        $n = '';
+      } else {
+        $t = "\t";
+        $n = "\n";
+      }
+      $indent = str_repeat( $t, $depth );
+
       if ($depth < WP_Bootstrap_Navwalker::BS_MAX_DEPTH) {
-        if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-          $t = '';
-          $n = '';
-        } else {
-          $t = "\t";
-          $n = "\n";
-        }
-
-        $indent = str_repeat( $t, $depth );
-
         if ( 0 === strcasecmp( $item->attr_title, 'divider' ) && $this->dropdown ) {
           $output .= $indent . '<div class="dropdown-divider"></div>' . $n;
           return;
@@ -273,6 +279,9 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
          */
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
       }
+      else {
+
+      }
     }
 
     /**
@@ -288,16 +297,19 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
      * @param stdClass $args   An object of wp_nav_menu() arguments.
      */
     public function end_el( &$output, $item, $depth = 0, $args = array() ) {
-      if ($depth < WP_Bootstrap_Navwalker::BS_MAX_DEPTH) {
-        if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-          $t = '';
-          $n = '';
-        } else {
-          $t = "\t";
-          $n = "\n";
-        }
+      if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+        $t = '';
+        $n = '';
+      } else {
+        $t = "\t";
+        $n = "\n";
+      }
 
+      if ($depth < WP_Bootstrap_Navwalker::BS_MAX_DEPTH) {
         $output .= $this->dropdown ? '' : str_repeat( $t, $depth ) . '</li>' . $n;
+      }
+      else {
+
       }
     }
 
