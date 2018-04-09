@@ -48,43 +48,6 @@
                         'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
                         'walker'          => new WP_Bootstrap_Navwalker()
                     ) ); ?>
-                    
-                    <!--<ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_ProductsAndServices" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Products & Services
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_ProductsAndServices">
-                                <li><a class="dropdown-item" href="#">Insurance</a></li>
-                                <li><a class="dropdown-item" href="#">Taxes</a></li>
-                                <li><a class="dropdown-item dropdown-toggle" href="#">Investments</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Client Login</a></li>
-                                </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_Education" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Education
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_Education">
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Our 2 Cents</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Newsletter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                    </ul>-->
                 </div> 
             </div>
         </nav>
