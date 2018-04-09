@@ -94,7 +94,6 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
         $n = "\n";
       }
 
-
       if ($depth >= WP_Bootstrap_Navwalker::BS_DROPDOWN_MANUAL_DEPTH) {
         $output         .= $n . str_repeat( $t, $depth ) . '</ul>' . $n;
       }
@@ -127,7 +126,10 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
       }
       $indent = str_repeat( $t, $depth );
 
-      if ($depth < WP_Bootstrap_Navwalker::BS_MAX_DEPTH) {
+      if ($depth >= WP_Bootstrap_Navwalker::BS_DROPDOWN_MANUAL_DEPTH) {
+
+      }
+      else {
         if ( 0 === strcasecmp( $item->attr_title, 'divider' ) && $this->dropdown ) {
           $output .= $indent . '<div class="dropdown-divider"></div>' . $n;
           return;
@@ -279,9 +281,6 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
          */
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
       }
-      else {
-
-      }
     }
 
     /**
@@ -305,11 +304,11 @@ if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
         $n = "\n";
       }
 
-      if ($depth < WP_Bootstrap_Navwalker::BS_MAX_DEPTH) {
-        $output .= $this->dropdown ? '' : str_repeat( $t, $depth ) . '</li>' . $n;
+      if ($depth >= WP_Bootstrap_Navwalker::BS_DROPDOWN_MANUAL_DEPTH) {
+        
       }
       else {
-
+        $output .= $this->dropdown ? '' : str_repeat( $t, $depth ) . '</li>' . $n;
       }
     }
 
