@@ -19,6 +19,9 @@ if ( !defined( 'ABSPATH' ) ) {
  * GitHub Branch: master
  * License: GPL-3.0+
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
+ * 
+ * Modified by: Andrew Godfroy 
+ * Modifications: Enabled support for https://github.com/bootstrapthemesco/bootstrap-4-multi-dropdown-navbar
  */
 /* Check if Class Exists. */
 if ( !class_exists( 'WP_Bootstrap_Navwalker' ) ) {
