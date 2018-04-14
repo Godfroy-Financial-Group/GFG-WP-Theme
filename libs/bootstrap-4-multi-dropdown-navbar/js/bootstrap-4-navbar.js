@@ -31,13 +31,15 @@ $( document ).ready( function () {
     $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', preformSubmenuDropdownToggle);
     
     /// Try to enable Hover effects
-    $( '.dropdown-menu a.dropdown-toggle' ).hover(function() {
-        $(this).parent().toggleClass("show");
-        $(this).parent().find(".dropdown-menu").toggleClass("show"); 
-    });
-    $( ".dropdown-menu a.dropdown-toggle" ).mouseleave(function() {
-        setTimeout(function() {
-          $(this).removeClass("show");
-        }, 700); // delay the removal of the 'show' class for 3 seconds
-      });
+    $( '.dropdown-menu a.dropdown-toggle' ).hover(preformSubmenuDropdownToggle);
+    //function() {
+    //    $(this).parent().toggleClass("show");
+    //    $(this).parent().find(".dropdown-menu").toggleClass("show"); 
+    //});
+    $( ".dropdown-menu a.dropdown-toggle" ).mouseleave(preformSubmenuDropdownToggle);
+    //function() {
+    //    setTimeout(function() {
+    //      $(this).removeClass("show");
+    //    }, 700); // delay the removal of the 'show' class for 3 seconds
+    //  });
 } );
