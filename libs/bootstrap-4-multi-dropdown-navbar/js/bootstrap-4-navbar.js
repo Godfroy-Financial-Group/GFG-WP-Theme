@@ -7,7 +7,7 @@
 
 
 $( document ).ready( function () {
-    $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', function ( e ) {
+    function preformSubmenuDropdownToggle(e) {
         var $el = $( this );
         var $parent = $( this ).offsetParent( ".dropdown-menu" );
         if ( !$( this ).next().hasClass( 'show' ) ) {
@@ -27,5 +27,8 @@ $( document ).ready( function () {
         }
 
         return false;
-    } );
+    }
+
+    $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', preformSubmenuDropdownToggle);
+    $( '.dropdown-menu a.dropdown-toggle' ).on( 'hover', preformSubmenuDropdownToggle);
 } );
