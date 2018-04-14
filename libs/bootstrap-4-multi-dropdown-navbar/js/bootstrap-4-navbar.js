@@ -28,7 +28,16 @@ $( document ).ready( function () {
 
         return false;
     }
-
     $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', preformSubmenuDropdownToggle);
-    $( '.dropdown-menu a.dropdown-toggle' ).on( 'hover', preformSubmenuDropdownToggle);
+    
+    /// Try to enable Hover effects
+    $( '.dropdown-menu a.dropdown-toggle' ).hover(function() {
+        $(this).parent().toggleClass("show");
+        $(this).parent().find(".dropdown-menu").toggleClass("show"); 
+    });
+    $( ".dropdown-menu a.dropdown-toggle" ).mouseleave(function() {
+        setTimeout(function() {
+          $(this).removeClass("show");
+        }, 700); // delay the removal of the 'show' class for 3 seconds
+      });
 } );
