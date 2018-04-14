@@ -1,3 +1,7 @@
+/* Fix Bootstrap Dropdown Menus on Desktop to Enable Hover */
+.dropdown:hover > .dropdown-menu {
+  display: block; }
+
 /* Header, Body and Footer Layout */
 html {
   position: relative;
