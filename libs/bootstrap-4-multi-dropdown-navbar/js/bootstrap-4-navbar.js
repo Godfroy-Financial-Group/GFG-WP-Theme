@@ -31,6 +31,6 @@ $( document ).ready( function () {
     $( '.dropdown-menu a.dropdown-toggle' ).on( 'click', preformSubmenuDropdownToggle);
     
     /// Try to enable Hover effects
-    $( '.dropdown-menu a.dropdown-toggle' ).hover(preformSubmenuDropdownToggle);
+    // $( '.dropdown-menu a.dropdown-toggle' ).hover(preformSubmenuDropdownToggle);
     // $( ".dropdown-menu a.dropdown-menu" ).mouseleave(preformSubmenuDropdownToggle);
 } );
