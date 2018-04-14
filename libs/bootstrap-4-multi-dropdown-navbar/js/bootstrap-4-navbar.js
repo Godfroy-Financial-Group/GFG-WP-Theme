@@ -8,7 +8,6 @@
 
 $( document ).ready( function () {
     function preformSubmenuDropdownToggle(e) {
-        alert("preformSubmenuDropdownToggle");
         var $el = $( this );
         var $parent = $( this ).offsetParent( ".dropdown-menu" );
         if ( !$( this ).next().hasClass( 'show' ) ) {
