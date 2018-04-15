@@ -12,14 +12,14 @@
 
                 $previousPostLink = get_previous_post('« Previous');
                 $nextPostLink = get_next_post('Next »');?>
-                
+
                 <nav>
                     <ul class="pager list-inline">
                         <?php if ($previousPostLink): ?>
-                            <li class="list-inline-item btn btn-secondary">Previous</li>
+                            <li class="list-inline-item btn btn-secondary"><?php echo $previousPostLink; ?></li>
                         <?php endif; ?>
                         <?php if ($nextPostLink): ?>
-                            <li class="list-inline-item btn btn-secondary">Next</li>
+                            <li class="list-inline-item btn btn-secondary"><?php echo $nextPostLink; ?></li>
                         <?php endif; ?> 
                     </ul>
                 </nav>     
