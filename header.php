@@ -56,7 +56,7 @@
             </div>
         </nav>
         
-        <div class="page-header clearfix">
+        <div class="page-title-bar clearfix">
             <h1 class="float-right"><?php the_title(); ?></h1>
         </div>
     </header>
