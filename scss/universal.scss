@@ -10,6 +10,8 @@
 
 $navbarPrimaryMinHeight: 75px;
 $footerMinHeight: 60px;
+$mainContainerTopSpacing: 40px;
+
 html {
   position: relative;
   min-height: 100%;
@@ -38,7 +40,7 @@ body {
 }
 
 .main-container {
-  margin-top: $navbarPrimaryMinHeight + 20px;
+  margin-top: $navbarPrimaryMinHeight + $mainContainerTopSpacing;
 }
 
 .footer {
