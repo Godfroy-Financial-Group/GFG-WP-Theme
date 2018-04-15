@@ -6,5 +6,7 @@ $('body').on('mouseenter mouseleave','.dropdown',function(e){
 });
 
 $(document).ready(function() {
-  $(".page-title-bar").css("margin-top", $(".navbar-primary").outerHeight());
+  new ResizeSensor(jQuery('.navbar-primary'), function() {
+    $(".page-title-bar").css("margin-top", $(".navbar-primary").outerHeight());
+  });
 });
