@@ -4,3 +4,7 @@ $('body').on('mouseenter mouseleave','.dropdown',function(e){
     _d[_d.is(':hover')?'addClass':'removeClass']('show');
   },300);
 });
+
+$(document).ready(function() {
+  $(".page-title-bar").css("margin-top", $(".navbar-primary").height());
+});

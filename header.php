@@ -29,7 +29,7 @@
 
 <body>
     <!-- Fixed navbar -->
-    <header>
+    <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbar-primary">
             <div class="container">
                 <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="navbar-brand">
@@ -54,11 +54,11 @@
                 </div> 
             </div>
         </nav>
-        
-        <div class="page-title-bar clearfix">
-            <h1 class="float-right"><?php the_title(); ?></h1>
-        </div>
     </header>
+        
+    <div class="page-title-bar clearfix">
+        <h1 class="float-right"><?php the_title(); ?></h1>
+    </div>
 
     <!-- Begin page content -->
     <div class="container main-container">
