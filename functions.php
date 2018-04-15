@@ -21,6 +21,8 @@ function show_next_posts_nav() {
   global $wp_query;
   global $paged;
   $maxPages = $wp_query->max_num_pages;
+  echo "<p>$paged</p>";
+  echo "<p>$maxPages</p>";
 
   if ($paged == $maxPages-1) return false;
 	return $maxPages > 1;
