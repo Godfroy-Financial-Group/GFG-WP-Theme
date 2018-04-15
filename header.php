@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Godfroy Financial Group</title>
+
+    <meta name="title" content="<?php echo get_bloginfo( 'name' ); ?>">
+    <meta name="description" content="<?php echo get_bloginfo( 'description' ); ?>">
     <link type="text/plain" rel="author" href="<?php echo get_bloginfo('template_directory'); ?>/humans.txt" />
 
     <!-- Import our Libs -->
@@ -54,9 +57,9 @@
         </nav>
     </header>
 
+	<div class="page-header clearfix">
+		<h1 class="float-right"><?php the_title(); ?></h1>
+	</div>
+
     <!-- Begin page content -->
-<div class="container main-container">
-<!-- <div class="page-header">
-    <h1><a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-    <p><?php echo get_bloginfo( 'description' ); ?></p>
-</div> -->
+    <div class="container main-container">
