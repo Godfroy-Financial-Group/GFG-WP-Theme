@@ -1,5 +1,3 @@
 <div class="blog-post">
-	<div class="row">
-		<p><?php the_content(); ?></p>
-	</div>
+	<p><?php the_content(); ?></p>
 </div>
