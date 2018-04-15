@@ -16,6 +16,7 @@
     <!-- And now our site stylesheets -->
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/universal.css">
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/home.css">
+    <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/blog.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
