@@ -10,8 +10,9 @@
 				    get_template_part( 'content', get_post_format() );
                 }
 
-                $previousPostLink = previous_posts_link('« Previous');
-                $nextPostLink = next_posts_link('Next »');?>
+                $previousPostLink = get_previous_post('« Previous');
+                $nextPostLink = get_next_post('Next »');?>
+                
                 <nav>
                     <ul class="pager list-inline">
                         <?php if ($previousPostLink): ?>
