@@ -57,9 +57,15 @@
     </header>
     
     <div class="page-title-bar clearfix">
-        <?php if(is_home() && is_front_page() || is_front_page() || is_single()): // static or default hompage...?>
-            <h1 class="float-right"><?php the_title(); ?></h1>
-        <?php endif;?>
+        <h1 class="float-right">
+                <?php if(is_home() && is_front_page() || is_front_page() || is_single()) { // static or default hompage...
+                    echo the_title();
+                }
+                else {
+                    echo "Blog";
+                }
+                ?>
+            </h1>
     </div>
 
     <!-- Begin page content -->
