@@ -12,7 +12,6 @@
 
                 $previousPostLink = previous_posts_link('« Previous');
                 $nextPostLink = next_posts_link('Next »');
-
                 if ($previousPostLink || $nextPostLink): ?>
                     <nav>
                         <ul class="pager list-inline">
@@ -21,7 +20,7 @@
                             <?php endif; ?>
                             <?php if ($nextPostLink): ?>
                                 <li class="list-inline-item btn btn-secondary"><?php echo $nextPostLink; ?></li>
-                            <?php endif; ?>
+                            <?php endif; ?> 
                         </ul>
                     </nav>     
                 <?php endif; ?>
