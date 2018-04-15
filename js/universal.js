@@ -6,5 +6,5 @@ $('body').on('mouseenter mouseleave','.dropdown',function(e){
 });
 
 $(document).ready(function() {
-  $(".page-title-bar").css("margin-top", $(".navbar-primary").height());
+  $(".page-title-bar").css("margin-top", $(".navbar-primary").outerHeight());
 });
