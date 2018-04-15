@@ -17,10 +17,10 @@
                     <nav>
                         <ul class="pager list-inline">
                             <?php if ($previousPostLink): ?>
-                                <li class="list-inline-item btn btn-secondary"><?php previous_posts_link('« Previous'); ?></li>
+                                <li class="list-inline-item btn btn-secondary"><?php echo $previousPostLink; ?></li>
                             <?php endif; ?>
                             <?php if ($nextPostLink): ?>
-                                <li class="list-inline-item btn btn-secondary"><?php  ?></li>
+                                <li class="list-inline-item btn btn-secondary"><?php echo $nextPostLink; ?></li>
                             <?php endif; ?>
                         </ul>
                     </nav>     
