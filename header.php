@@ -55,11 +55,11 @@
                 </div> 
             </div>
         </nav>
+        
+        <div class="page-header clearfix">
+            <h1 class="float-right"><?php the_title(); ?></h1>
+        </div>
     </header>
-
-	<div class="page-header clearfix">
-		<h1 class="float-right"><?php the_title(); ?></h1>
-	</div>
 
     <!-- Begin page content -->
     <div class="container main-container">
