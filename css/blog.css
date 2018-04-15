@@ -1,4 +1,7 @@
 .pager {
   list-style-type: none; }
+  .pager li a, .pager li a:link, .pager li a:visited, .pager li a:hover, .pager li a:active {
+    color: white;
+    text-decoration: none; }
 
 /*# sourceMappingURL=blog.css.map */
