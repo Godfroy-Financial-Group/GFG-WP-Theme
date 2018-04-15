@@ -1,5 +1,11 @@
 @import "utilities/_variables.scss";
 
+/* Links */
+a, a:link, a:visited, a:hover, a:active {
+  color: $linkColors;
+  text-decoration: none;
+}
+
 /* Fix Bootstrap Dropdown Menus to Enable Hover Toggle For Keyboard/Mouse */
 .dropdown:hover>.dropdown-menu {
   display: block;
