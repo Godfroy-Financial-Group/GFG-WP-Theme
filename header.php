@@ -56,11 +56,11 @@
         </nav>
     </header>
     
-    <?php if(is_home() && is_front_page() || is_front_page() || is_single()): // static or default hompage...?>
     <div class="page-title-bar clearfix">
-        <h1 class="float-right"><?php the_title(); ?></h1>
+        <?php if(is_home() && is_front_page() || is_front_page() || is_single()): // static or default hompage...?>
+            <h1 class="float-right"><?php the_title(); ?></h1>
+        <?php endif;?>
     </div>
-    <?php endif;?>
 
     <!-- Begin page content -->
     <div class="container main-container">
