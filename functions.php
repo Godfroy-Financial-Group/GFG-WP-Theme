@@ -12,6 +12,16 @@ function register_my_menus() {
   }
   add_action( 'init', 'register_my_menus' );
 
+// Next/Previous Posts
+function show_prev_posts_nav() {
+  global $paged;
+  return $paged > 0;
+}
+function show_next_posts_nav() {
+	global $wp_query;
+	return ($wp_query->max_num_pages > 1);
+}
+
 
 // Custom settings
 function custom_theme_settings_add_menu() {

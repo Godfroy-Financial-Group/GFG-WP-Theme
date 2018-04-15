@@ -8,22 +8,15 @@
                 while (have_posts()) {  
                     the_post();
 				    get_template_part( 'content', get_post_format() );
-                }
-
-                $previousPostLink = previous_posts_link('« Previous');
-                $nextPostLink = next_posts_link('Next »');
+                } ?>
                 
-                var_dump($previousPostLink);
-                var_dump($nextPostLink);
-                
-                ?>
                 <nav>
                     <ul class="pager list-inline">
-                        <?php if ($previousPostLink): ?>
-                            <li class="list-inline-item btn btn-dark"><?php $previousPostLink; ?></li>
+                        <?php if (show_prev_posts_nav()): ?>
+                            <li class="list-inline-item btn btn-dark"><?php previous_posts_link('« Previous'); ?></li>
                         <?php endif; ?>
-                        <?php if ($nextPostLink): ?>
-                            <li class="list-inline-item btn btn-dark"><?php $nextPostLink; ?></li>
+                        <?php if (show_next_posts_nav()): ?>
+                            <li class="list-inline-item btn btn-dark"><?php next_posts_link('Next »'); ?></li>
                         <?php endif; ?> 
                     </ul>
                 </nav>     
