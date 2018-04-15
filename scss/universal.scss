@@ -40,9 +40,9 @@ body {
 .page-title-bar {
   background-color: $gfg_green_color5;
   width: 100%;
-  height: 100px;
+  height: $pageTitleBarHeight;
   margin-top: $navbarPrimaryMinHeight;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-right: 50px;
   padding-bottom: 5px;
   padding-left: 10px;
