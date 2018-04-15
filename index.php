@@ -10,8 +10,8 @@
 				    get_template_part( 'content', get_post_format() );
                 }
 
-                $previousPostLink = get_previous_post('« Previous');
-                $nextPostLink = get_next_post('Next »');?>
+                $previousPostLink = get_previous_post_link();
+                $nextPostLink = get_next_post_link();?>
 
                 <nav>
                     <ul class="pager list-inline">
