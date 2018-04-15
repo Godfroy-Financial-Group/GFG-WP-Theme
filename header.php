@@ -60,9 +60,9 @@
         <h1 class="float-right">
             <?php
             if ( is_front_page() && is_home() ) {   // Default homepage
-                echo "";
+                echo "Godfroy Financial Group";
             } elseif ( is_front_page() ) {  // static homepage
-                echo "";
+                echo "Godfroy Financial Group";
             } elseif ( is_home() ) {  // blog page
                 echo "Blog"; 
             } else {  //everyting else
