@@ -1,5 +1,8 @@
 <div class="blog-post">
-	<?php the_title(); ?>
-	<?php the_content(); ?>
+	<div class="row page-title">
+		<h1><?php the_title(); ?></h1>
+	</div>
+	<div class="row">
+		<p><?php the_content(); ?></p>
+	</div>
 </div>
-<!-- /.blog-post -->
