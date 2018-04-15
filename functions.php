@@ -18,8 +18,12 @@ function show_prev_posts_nav() {
   return $paged > 0;
 }
 function show_next_posts_nav() {
-	global $wp_query;
-	return ($wp_query->max_num_pages > 1);
+  global $wp_query;
+  global $paged;
+  $maxPages = $wp_query->max_num_pages;
+
+  if ($paged == $maxPages-1) return false;
+	return $maxPages > 1;
 }
 
 
