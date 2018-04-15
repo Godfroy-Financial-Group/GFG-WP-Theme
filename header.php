@@ -55,7 +55,7 @@
 
     <!-- Begin page content -->
 <div class="container main-container">
-<div class="page-header">
+<!-- <div class="page-header">
     <h1><a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
     <p><?php echo get_bloginfo( 'description' ); ?></p>
-</div>
+</div> -->
