@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,YAAa;EACT,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,UAAU",
-"sources": ["../scss/blog.scss"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "blog.css"
 }
