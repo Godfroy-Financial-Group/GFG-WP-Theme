@@ -58,14 +58,19 @@
     
     <div class="page-title-bar clearfix">
         <h1 class="float-right">
-                <?php if(is_page('blog')) {
-                    echo "Blog"; 
-                }
-                else {
-                    echo the_title();
-                }
-                ?>
-            </h1>
+            <?php
+            if ( is_front_page() && is_home() ) {   // Default homepage
+
+                echo the_title();
+            } elseif ( is_front_page() ) {  // static homepage
+                echo the_title();
+            } elseif ( is_home() ) {  // blog page
+                echo "Blog"; 
+            } else {  //everyting else
+                echo the_title();
+            }
+            ?>
+        </h1>
     </div>
 
     <!-- Begin page content -->
