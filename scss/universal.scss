@@ -70,8 +70,6 @@ body {
 /* Carousel */
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-$carouselHeight: 100px;
-
 
 /* Carousel base class */
 .carousel {
@@ -85,14 +83,14 @@ $carouselHeight: 100px;
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: $carouselHeight;
+  height: $testimonialCarouselHeight;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: $carouselHeight;
+  height: $testimonialCarouselHeight;
 }
 
 /* Testimonial Carousel */

@@ -10,9 +10,9 @@
                 endwhile;  ?>
 
                 <nav>
-                    <ul class="pager">
-                        <li><?php next_posts_link( 'Previous' ); ?></li>
-                        <li><?php previous_posts_link( 'Next' ); ?></li>
+                    <ul class="pager list-inline">
+                        <li class="list-inline-item btn btn-secondary"><?php previous_posts_link('« Previous'); ?></li>
+                        <li class="list-inline-item btn btn-secondary"><?php next_posts_link('Next »'); ?></li>
                     </ul>
                 </nav>        
             <?php endif; ?>
