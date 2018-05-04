@@ -1,5 +1,8 @@
 <hr>
-    <h3>Testimonials</h2>
+    <?php 
+    $testimonialsEnabled = get_option('enableTestimonials');
+    if($testimonialsEnabled):?>
+        <h3>Testimonials</h2>
         <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
@@ -51,6 +54,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    <?php endif;?>
 </div>
 
     <footer id="main-footer" class="footer">

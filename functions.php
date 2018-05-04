@@ -25,6 +25,32 @@ function show_next_posts_nav() {
 	return $maxPages > 1;
 }
 
+// move admin bar to bottom
+function fb_move_admin_bar() { ?>
+	<style type="text/css">
+		body {
+			margin-top: -28px;
+			padding-bottom: 28px;
+		}
+		body.admin-bar #wphead {
+			padding-top: 0;
+		}
+		body.admin-bar #footer {
+			padding-bottom: 28px;
+		}
+		#wpadminbar {
+			top: auto !important;
+			bottom: 0;
+		}
+		#wpadminbar .quicklinks .menupop ul {
+			bottom: 28px;
+		}
+	</style>
+<?php }
+// on backend area
+add_action( 'admin_head', 'fb_move_admin_bar' );
+// on frontend area
+add_action( 'wp_head', 'fb_move_admin_bar' );
 
 // Custom settings
 function custom_theme_settings_add_menu() {
@@ -46,6 +72,10 @@ function custom_theme_settings_page() { ?>
 </div>
 <?php }
 
+// Enable Testimonials
+function setting_enableTestimonials() { ?>
+  <input type="checkbox" name="enableTestimonials" id="enableTestimonials" value="<?php echo get_option('enableTestimonials'); ?>" size="75" />
+  <?php }
 // Twitter
 function setting_twitter() { ?>
 <input type="text" name="twitter" id="twitter" value="<?php echo get_option('twitter'); ?>" size="75" />
@@ -57,9 +87,11 @@ function setting_facebook() { ?>
 
 function custom_theme_settings_page_setup() {
     add_settings_section('section', 'All Settings', null, 'theme-options');
+    add_settings_field('enableTestimonials', 'Enable Testimonials', 'setting_enableTestimonials', 'theme-options', 'section');
     add_settings_field('twitter', 'Twitter URL', 'setting_twitter', 'theme-options', 'section');
     add_settings_field('facebook', 'Facebook URL', 'setting_facebook', 'theme-options', 'section');
     
+    register_setting('section', 'enableTestimonial');
     register_setting('section', 'twitter');
     register_setting('section', 'facebook');
   }
