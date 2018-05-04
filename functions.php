@@ -25,32 +25,17 @@ function show_next_posts_nav() {
 	return $maxPages > 1;
 }
 
-// move admin bar to bottom
-function fb_move_admin_bar() { ?>
-	<style type="text/css">
-		body {
-			margin-top: -28px;
-			padding-bottom: 28px;
-		}
-		body.admin-bar #wphead {
-			padding-top: 0;
-		}
-		body.admin-bar #footer {
-			padding-bottom: 28px;
-		}
-		#wpadminbar {
-			top: auto !important;
-			bottom: 0;
-		}
-		#wpadminbar .quicklinks .menupop ul {
-			bottom: 28px;
-		}
-	</style>
-<?php }
-// on backend area
-// add_action( 'admin_head', 'fb_move_admin_bar' );
-// on frontend area
-// add_action( 'wp_head', 'fb_move_admin_bar' );
+// Prevent the AdminBar from Breaking the header Styles
+function prefix_move_theme_down() {
+  if ( is_admin_bar_showing() ) {
+    ?>
+    <style type="text/css">
+    .site-header { top: 28px; }
+    </style>
+    <?php
+  }
+}
+add_action( 'wp_head', 'prefix_move_theme_down' );
 
 // Custom settings
 function custom_theme_settings_add_menu() {
