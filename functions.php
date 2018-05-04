@@ -48,9 +48,9 @@ function fb_move_admin_bar() { ?>
 	</style>
 <?php }
 // on backend area
-add_action( 'admin_head', 'fb_move_admin_bar' );
+// add_action( 'admin_head', 'fb_move_admin_bar' );
 // on frontend area
-add_action( 'wp_head', 'fb_move_admin_bar' );
+// add_action( 'wp_head', 'fb_move_admin_bar' );
 
 // Custom settings
 function custom_theme_settings_add_menu() {
