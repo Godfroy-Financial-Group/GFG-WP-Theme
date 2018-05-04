@@ -76,6 +76,10 @@ function custom_theme_settings_page() { ?>
 function setting_enableTestimonials() { ?>
   <input type="checkbox" name="enableTestimonials" id="enableTestimonials" value="<?php echo get_option('enableTestimonials'); ?>" size="75" />
   <?php }
+// Enable Comments
+function setting_enableComments() { ?>
+  <input type="checkbox" name="enableComments" id="enableComments" value="<?php echo get_option('enableComments'); ?>" size="75" />
+  <?php }
 // Twitter
 function setting_twitter() { ?>
 <input type="text" name="twitter" id="twitter" value="<?php echo get_option('twitter'); ?>" size="75" />
@@ -88,10 +92,12 @@ function setting_facebook() { ?>
 function custom_theme_settings_page_setup() {
     add_settings_section('section', 'All Settings', null, 'theme-options');
     add_settings_field('enableTestimonials', 'Enable Testimonials', 'setting_enableTestimonials', 'theme-options', 'section');
+    add_settings_field('enableComments', 'Enable Comments', 'setting_enableComments', 'theme-options', 'section');
     add_settings_field('twitter', 'Twitter URL', 'setting_twitter', 'theme-options', 'section');
     add_settings_field('facebook', 'Facebook URL', 'setting_facebook', 'theme-options', 'section');
     
     register_setting('section', 'enableTestimonial');
+    register_setting('section', 'enableComments');
     register_setting('section', 'twitter');
     register_setting('section', 'facebook');
   }
