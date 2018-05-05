@@ -29,7 +29,7 @@ function show_next_posts_nav() {
 function prefix_move_theme_down() {
   if ( is_admin_bar_showing() ) { ?>
     <style type="text/css">
-    header.site-header { margin-top: 28px; }
+    .navbar-primary { top: 32px; }
     </style> <?php
   }
 }
