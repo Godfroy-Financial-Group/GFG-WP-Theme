@@ -15,9 +15,7 @@ new ResizeSensor(jQuery('.navbar-primary'), function() {
     adminBarOffset += 32;
   }
   
-  var marginTop = topOffset + navbarHeight;
-  marginTop -= adminBarOffset;
-  
+  var marginTop = topOffset + navbarHeight + adminBarOffset;
   $(".page-title-bar").css("margin-top", marginTop);
 });
 
