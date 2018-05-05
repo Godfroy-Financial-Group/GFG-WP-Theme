@@ -27,12 +27,10 @@ function show_next_posts_nav() {
 
 // Prevent the AdminBar from Breaking the header Styles
 function prefix_move_theme_down() {
-  if ( is_admin_bar_showing() ) {
-    ?>
+  if ( is_admin_bar_showing() ) { ?>
     <style type="text/css">
-    .site-header { top: 28px; }
-    </style>
-    <?php
+    header.site-header { margin-top: 28px; }
+    </style> <?php
   }
 }
 add_action( 'wp_head', 'prefix_move_theme_down' );
