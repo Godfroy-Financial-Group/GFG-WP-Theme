@@ -46,9 +46,9 @@ body {
 .page-title-bar {
   background-color: $gfg_green_color5;
   width: 100%;
-  min-height: $pageTitleBarHeight;
-  margin-top: $navbarPrimaryMinHeight;
-  padding-top: 10px;
+  min-height: $navbarPrimaryMinHeight + $pageTitleBarHeight;
+  margin-top: 0px;
+  padding-top: $navbarPrimaryMinHeight + 10px;
   padding-right: 50px;
   padding-bottom: 10px;
   padding-left: 10px;
