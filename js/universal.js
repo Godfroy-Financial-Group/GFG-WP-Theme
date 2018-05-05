@@ -7,15 +7,18 @@ $('body').on('mouseenter mouseleave','.dropdown',function(e){
 });
 
 new ResizeSensor(jQuery('.navbar-primary'), function() {
+  var topOffset = parseInt($(".navbar-primary").css('top'));
+  var navbarHeight = $(".navbar-primary").outerHeight();
+
   var adminBarOffset = 0;
   if ($("#wpadminbar").length) {
     adminBarOffset += 32;
   }
   
-  var topOffset = parseInt($(".navbar-primary").css('top'));
-  var navbarHeight = $(".navbar-primary").outerHeight();
-
-  $(".page-title-bar").css("margin-top", topOffset + navbarHeight - adminBarOffset);
+  var marginTop = topOffset + navbarHeight;
+  marginTop -= adminBarOffset;
+  
+  $(".page-title-bar").css("margin-top", marginTop);
 });
 
 // Post Document Ready
