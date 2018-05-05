@@ -7,7 +7,12 @@ $('body').on('mouseenter mouseleave','.dropdown',function(e){
 });
 
 new ResizeSensor(jQuery('.navbar-primary'), function() {
-  $(".page-title-bar").css("margin-top", $(".navbar-primary").outerHeight());
+  var offset = 0;
+  if ($("#wpadminbar").length) {
+    offset += 32;
+  }
+  
+  $(".page-title-bar").css("margin-top", $(".navbar-primary").outerHeight() - offset);
 });
 
 // Post Document Ready
