@@ -7,12 +7,15 @@ $('body').on('mouseenter mouseleave','.dropdown',function(e){
 });
 
 new ResizeSensor(jQuery('.navbar-primary'), function() {
-  var offset = 0;
+  var adminBarOffset = 0;
   if ($("#wpadminbar").length) {
-    offset += 32;
+    adminBarOffset += 32;
   }
   
-  $(".page-title-bar").css("margin-top", $(".navbar-primary").outerHeight() - offset);
+  var topOffset = parseInt($(".navbar-primary").css('top'));
+  var navbarHeight = $(".navbar-primary").outerHeight();
+
+  $(".page-title-bar").css("margin-top", topOffset + navbarHeight - adminBarOffset);
 });
 
 // Post Document Ready
