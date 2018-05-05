@@ -35,6 +35,11 @@ function prefix_move_theme_down() {
 }
 add_action( 'wp_head', 'prefix_move_theme_down' );
 
+function my_filter_head() {
+  remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('get_header', 'my_filter_head');
+
 // Custom settings
 function custom_theme_settings_add_menu() {
     add_menu_page( 'Theme Settings', 'Theme Settings', 'manage_options', 'theme-settings', 'custom_theme_settings_page', null, 99 );
