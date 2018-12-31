@@ -60,7 +60,7 @@
     <footer id="main-footer" class="footer">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-secondary">
             <div class="container">
-                <a class="navbar-brand" href="#">&copy; 2017 Godfroy Financial Group</a>
+                <a class="navbar-brand" href="#">&copy; <?php echo date("Y"); ?>, Godfroy Financial Group</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-nav-body" aria-controls="footer-nav-body"
                     aria-haspopup="true" aria-expanded="false" aria-label="Toggle navigation">
